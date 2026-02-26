@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  melody-app: melodyimage
+    container_name: melody-app
+    ports:
+      - "3007:3007"
+    restart: always

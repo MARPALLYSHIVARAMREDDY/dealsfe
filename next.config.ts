@@ -1,0 +1,34 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  logging: {
+    fetches:{
+      fullUrl: true,
+    }
+  },
+  compress: true,
+
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
+    remotePatterns: [
+      { protocol: "https", hostname: "m.media-amazon.com" },
+      { protocol: "https", hostname: "cdnp0.stackassets.com" },
+      { protocol: "https", hostname: "assets.aceternity.com" },
+      { protocol: "https", hostname: "pub-7a6b6559893d4831935abb118fb44a67.r2.dev" },
+      { protocol: "https", hostname: "picsum.photos" },
+      
+    ],
+  },
+  
+  experimental: {
+    optimizePackageImports: ["lucide-react", "@tabler/icons-react", "motion"],
+  },
+cacheComponents: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+};
+
+export default nextConfig;

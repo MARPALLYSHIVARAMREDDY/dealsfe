@@ -1,0 +1,7 @@
+title = "Org Gitleaks Configuration"
+
+[allowlist]
+paths = [
+  ".env",
+  ".env.*"
+]
